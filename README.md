@@ -17,7 +17,7 @@ The Slack Appender can be dowloaded from the [releases section](https://github.c
 >- When [running Servoy as a Service](https://wiki.servoy.com/display/public/DOCS/Running+the+Server+As+a+Service), open `/application_server/service/wrapper.conf` in a text editor and add `wrapper.java.classpath.xx=lib\extra\SlackAppender.jar`, replacing xx with an appropriate incremental number (based in the already existing wrapper.java.classpath.xx entries)
 >- When not using the Service Wrapper, the classpath is located in `application_server/servoy_server.bat/sh`: open this file in a text editor and add `lib/extra/*` to the classpath (making sure to use a semi-colon to properly separate the new entry form the existing entries)
 
->If you'd like a cleaner way to include the Slack appender in your Servoy Application Server, please vote for: [Provide a way to include extra JARs in the Servoy app server, without having to modify Servoy's .bat\/.sh files](https://support.servoy.com/browse/SVY-9450) in the Servoy Support system
+>If you'd like a cleaner way to include the Slack appender in your Servoy Application Server, please vote for: [Provide a way to include extra JARs in the Servoy app server, without having to modify Servoy's .bat/.sh files](https://support.servoy.com/browse/SVY-9450) in the Servoy Support system
 
 Appender classname: com.tod.utils.logging.SlackAppender
 
