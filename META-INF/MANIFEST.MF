@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Bundle-Name: Slack Appender
+Bundle-Vendor: The Orange Dots
+Bundle-Version: 1.0.0
+Bundle-SymbolicName: SlackAppender
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
