@@ -1,5 +1,5 @@
 # SlackAppender
-SlackAppender is a [Log4j](https://logging.apache.org/log4j) [Appender]() for routing log messages to [Slack](http://slack.com). 
+SlackAppender is a [Log4j](https://logging.apache.org/log4j) [Appender](https://logging.apache.org/log4j/2.x/manual/appenders.html) for routing log messages to [Slack](http://slack.com). 
 
 # Requirements
 - Log4j 1.x (SlackAppender currently does NOT directly support Log4j 2, but should work in Log4j 2 through the [Log4j 1.x bridge](https://logging.apache.org/log4j/2.x/manual/migration.html))
