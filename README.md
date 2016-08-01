@@ -39,7 +39,7 @@ log4j.appender.slack.UserName=Servoy
 log4j.appender.slack.Channel=UAT
 ```
 
-TIP if there are specific messages that need to be filtered out, a [Log4j](https://logging.apache.org/log4j) [Filter](http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/spi/Filter.html) can be used. For example, to filter out all messages related to column names being too long, also add the following to the .properties file:
+:bulb: if there are specific messages that need to be filtered out, a [Log4j](https://logging.apache.org/log4j) [Filter](http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/spi/Filter.html) can be used. For example, to filter out all messages related to column names being too long, also add the following to the .properties file:
 ```
 log4j.appender.slack.filter.1=org.apache.log4j.varia.StringMatchFilter
 log4j.appender.slack.filter.1.AcceptOnMatch=false
