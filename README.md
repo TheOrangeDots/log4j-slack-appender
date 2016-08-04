@@ -24,7 +24,7 @@ The SlackAppender.jar can be dowloaded from the [releases section](https://githu
 #### Configuring Log4j to utilize the Slack Appender
 After adding SlackAppender.jar to the classpath, Log4j needs to be configured to correctly connect to Slack and route logmessages to it. Appenders for Log4j are configured using their className and the className for the Slack Appender is `com.tod.utils.logging.SlackAppender`.
 
-Besides generic appender configuration options, the Slack Appender comes with teh following additional configuration options:
+Besides generic appender configuration options, the Slack Appender comes with the following additional configuration options:
 - Url (mandatory): the url provided by slack when setting up an Incoming Webhook in Slack 
 - UserName: Overrides the userName configured in the Incoming Webhook in Slack
 - Channel: Overrides the channel configured in the Incoming Webhook in Slack
@@ -39,7 +39,13 @@ log4j.appender.slack.UserName=Servoy
 log4j.appender.slack.Channel=UAT
 ```
 
-:bulb: if there are specific messages that need to be filtered out, a [Log4j](https://logging.apache.org/log4j) [Filter](http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/spi/Filter.html) can be used. For example, to filter out all messages related to column names being too long, also add the following to the .properties file:
+The Slack Appender also needs to be added to a logger, for example the root logger:
+```
+log4j.rootCategory=WARN, console, slack
+```
+Note that the Slack Appender can just be added to the list of any existing appenders on the logger, as in the example above where `console` is an existing appender. 
+
+:bulb: If there are specific messages that should not be send to Slack, a [Log4j](https://logging.apache.org/log4j) [Filter](http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/spi/Filter.html) can be used to filter them out. For example, to filter out all messages related to column names being too long, also add the following to the .properties file:
 ```
 log4j.appender.slack.filter.1=org.apache.log4j.varia.StringMatchFilter
 log4j.appender.slack.filter.1.AcceptOnMatch=false
